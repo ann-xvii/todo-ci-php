@@ -16,16 +16,18 @@
 		<div class="form-group">
 
 			<div class="col-md-2">
+			<?php echo $this->lang->line('task_due_d'); ?>
 				<?php echo form_error('task_due_d'); ?>
 				<select name="task_due_d" class="form-control">
 					<option></option>
 					<?php for ($i = 1; $i <= 30; $i++): ?>
-						<option value="<?php echo $i; ?>"><?php echo date('j', mktime($i, 0, 0, 0, $i, 1, date('Y'))); ?></option>
+						<option value="<?php echo $i; ?>"><?php echo date('jS', mktime(0, 0, 0, $i, 1, date('Y'))); ?></option>
 					<?php endfor; ?>
 				</select>
 			</div> <!-- .col-md-2 -->
 
 			<div class="col-md-2">
+			<?php echo $this->lang->line('task_due_m'); ?>
 				<?php echo form_error('task_due_m'); ?>
 				<select name="task_due_m" class="form-control">
 					<option></option>
@@ -36,6 +38,7 @@
 			</div> <!-- .col-md-2 -->
 
 			<div class="col-md-2">
+			<?php echo $this->lang->line('task_due_y'); ?>
 				<?php echo form_error('task_due_y'); ?>
 				<select name="task_due_y" class="form-control">
 					<option></option>
